@@ -1,0 +1,121 @@
+.container {
+  display: grid;
+  z-index: -1;
+  padding: 20px;
+  grid-template-columns: repeat(5, 20%);
+  grid-auto-flow: column;
+}
+@media {
+  .container {
+    margin-top: 15vh;
+    display: grid;
+    z-index: -1;
+    grid-template-columns: repeat(5, 20%);
+    grid-auto-flow: column;
+  }
+}
+
+.footer {
+  background-color: black;
+}
+.column {
+  color: #fff;
+  outline: 1px solid blue;
+}
+
+.DreamGirl {
+  z-index: 2;
+  position: fixed;
+  top: 140px;
+  line-height: 0.9;
+  max-width: 200px;
+  font-size: 80px;
+  left: 0px;
+  color: blue;
+}
+.column .column {
+  color: #444;
+  outline: none;
+  margin: 5px;
+}
+
+.square {
+  background-color: black;
+  display: block;
+  margin: 2rem auto;
+  height: 20px;
+}
+@media (max-width: 760px) {
+  .square {
+    background-color: black;
+    width: 8px;
+    margin: 1rem;
+  }
+}
+
+.square_large {
+  height: 20px;
+  margin: 0.5rem auto;
+  background-color: black;
+  display: block;
+}
+@media (max-width: 760px) {
+  .square_large {
+    background-color: black;
+    height: 5px;
+    width: 4px;
+  }
+}
+
+.square_normal {
+  height: 20px;
+
+  display: block;
+  margin: 15%;
+  background-color: black;
+}
+
+.third {
+  top: 80px;
+  width: 30px;
+  height: 30px;
+  margin: 9rem;
+  background-color: black;
+}
+.first {
+  top: 200px;
+  width: 100px;
+  height: 150px;
+  margin: 4rem;
+  background-color: black;
+}
+.square_extra-large {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  background-color: black;
+  display: grid;
+}
+
+.square_tall_large {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  background-color: black;
+  display: grid;
+}
+
+.one {
+  margin-top: 250px;
+  display: grid;
+}
+
+.two {
+  margin-top: 500px;
+  display: grid;
+}
+
+.three {
+  margin-top: 100px;
+  display: grid;
+}

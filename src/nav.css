@@ -1,0 +1,124 @@
+.toolbar {
+  background-color: #feffe8;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.toolbar_navigation {
+  display: flex;
+  align-items: center;
+  padding: 0.25rem;
+  height: 10vh;
+  color: #007bff;
+  border-bottom: 1px solid blue;
+}
+@media (max-width: 760px) {
+  .toolbar_navigation {
+    display: flex;
+    background: none;
+    color: #007bff;
+    background-color: #feffe8;
+    align-items: center;
+    padding: 0 1rem;
+  }
+}
+
+.toolbar_navigation a {
+  text-decoration: none;
+  color: #007bff;
+  position: relative;
+}
+
+.toolbar_navigation a:hover {
+}
+
+/* The underline animation */
+/* READ MORE: https://css-tricks.com/almanac/selectors/a/after-and-before/ */
+.toolbar_navigation a:before {
+  content: ""; /* If you put a string here, it will show up */
+  position: absolute;
+  color: black;
+  left: 0; /* the position of the line */
+  width: 100%; /* width of the line */
+  height: 3px; /* how thick the line is */
+  bottom: 15px; /* the space between the text and the line */
+  background-color: black; /*color:black underline*/
+  visibility: hidden; /* by default the underline is hidden*/
+
+  /*   The scaleX() CSS function defines a transformation that resizes an element along the x-axis (horizontally). Its result is a <transform-function> data type. */
+
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s; /*how fast the animation is*/
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.toolbar_navigation a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1); /* width of the line. 1 is 100% */
+  transform: scaleX(0.5); /* width of the line. 1 is 100% */
+}
+
+.toolbar_navigation_items ul {
+  list-style: none;
+  display: flex;
+}
+
+.toolbar_navigation_items li {
+  padding: 1rem 3rem 0rem 3rem;
+  color: #007bff;
+}
+.toolbar_navigation_items li:hover {
+  padding: 1rem 3rem 0rem 3rem;
+  color: black;
+}
+
+.header {
+  color: black;
+  width: 100%;
+  align-content: center;
+}
+
+@media (max-width: 760px) {
+  .header {
+    color: black;
+    margin-top: 10%;
+    width: 100%;
+    flex: 1 100%;
+    align-content: center;
+  }
+}
+
+.logo {
+  left: 0;
+  color: #007bff;
+  top: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem 3rem 0rem 4rem;
+}
+@media (max-width: 760px) {
+  .logo {
+    right: 0;
+    margin: 0 15% 20px 20%;
+    display: flex;
+  }
+}
+
+.spacer {
+  flex: 1;
+}
+
+@media (max-width: 760px) {
+  .toolbar_navigation_items {
+    display: none;
+  }
+}
+
+@media (min-width: 760px) {
+  .toolbar__toggle-button {
+    display: none;
+  }
+}
