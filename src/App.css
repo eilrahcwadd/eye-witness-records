@@ -1,6 +1,7 @@
 .App {
   min-height: 100vh;
   display: flex;
+  overflow: hidden;
   align-items: center;
   margin: 0 auto;
   justify-content: space-around;
@@ -8,62 +9,124 @@
 }
 
 h1 {
-  font-size: 15px;
+  font-size: 6em;
+  color: #007bff;
+}
+.body_animation {
+  margin: 0 auto;
+  position: fixed;
+  top: 20%;
+  width: 100vw;
+  z-index: -1000;
+}
+.main_body {
+  outline: 1px solid black;
+  margin: 0 5%;
+  height: 70vh;
+  padding: 0 2%;
+  top: 20%;
+  position: fixed;
+}
+.body {
+  outline: 1px solid black;
+  margin: 0 5%;
+  height: 70vh;
+  padding: 0 2%;
+  top: 20%;
+  position: fixed;
+  overflow: scroll;
 }
 
+.card-text {
+  line-height: 0.1em;
+}
 .card-text h3 {
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 .wrapper {
   display: flex;
+  height: auto;
   flex-flow: row wrap;
-  text-align: center;
-  margin-top: 10%;
 }
 @media (max-width: 760px) {
   .wrapper {
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 15%;
   }
 }
-
+.wrapper-music {
+  margin: 0 auto;
+  height: auto;
+}
 .card-img-bottom {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
+}
+
+.logo_center {
+  font-size: 8em;
+  top: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-self: center;
+  margin: 0 auto;
+  position: fixed;
+  color: white;
+  stroke: 1px solid black;
 }
 .main {
   display: flex;
-  margin: 0 15% 0 15%;
   justify-content: center;
   flex-flow: row wrap;
   /* This aligns items to the end line on main-axis */
 }
 @media (max-width 760px) {
   .main {
-    display: flex;
+    display: block;
+    margin: 0%;
+    width: 25vw;
     justify-content: center;
     flex-flow: row wrap;
     /* This aligns items to the end line on main-axis */
   }
 }
 .card {
-  margin: 0 70px 0 70px;
+  margin: 10px;
 }
 .about-paragraph {
-  margin: 0 25%;
-  line-height: 1.5;
-  font-size: 20px;
+  font-size: 1.8em;
 }
 @media (max-width: 760px) {
   .about-paragraph {
-    margin: 0 15%;
+    margin: 0 3%;
     font-size: 18px;
   }
 }
 
 h3 {
   color: #007bff;
+}
+
+.fade-appear,
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms linear;
+}
+
+.fade-exity {
+  opacity: 0.1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 200ms ease-in;
 }

@@ -1,9 +1,15 @@
 .toolbar {
-  background-color: #feffe8;
+  background-color: blue;
   position: fixed;
-  width: 100%;
   top: 0;
-  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+@media (max-width: 760px) {
+  .toolbar {
+    width: 100%;
+  }
 }
 
 .toolbar_navigation {
@@ -12,14 +18,15 @@
   padding: 0.25rem;
   height: 10vh;
   color: #007bff;
-  border-bottom: 1px solid blue;
+  border-bottom: 1px solid black;
 }
 @media (max-width: 760px) {
   .toolbar_navigation {
     display: flex;
     background: none;
     color: #007bff;
-    background-color: #feffe8;
+    border-bottom: none;
+    background-color: white;
     align-items: center;
     padding: 0 1rem;
   }
@@ -29,6 +36,27 @@
   text-decoration: none;
   color: #007bff;
   position: relative;
+}
+
+.toolbar_navigation .logo a:hover {
+  color: black;
+}
+
+.toolbar_navigation .logo a:before {
+  content: ""; /* If you put a string here, it will show up */
+  position: absolute;
+  color: black;
+  left: 0; /* the position of the line */
+  width: 0%; /* width of the line */
+  height: 3px; /* how thick the line is */
+  bottom: 15px; /* the space between the text and the line */
+  background-color: black; /*color:black underline*/
+  visibility: hidden;
+
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s; /*how fast the animation is*/
+  transition: all 0.3s ease-in-out 0s;
 }
 
 .toolbar_navigation a:hover {
@@ -92,18 +120,19 @@
 }
 
 .logo {
-  left: 0;
+  right: 0;
   color: #007bff;
   top: 0;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  padding: 1rem 3rem 0rem 4rem;
+  width: 100vw;
 }
 @media (max-width: 760px) {
   .logo {
     right: 0;
-    margin: 0 15% 20px 20%;
-    display: flex;
+    width: 100vw;
+    font-size: 1em;
+    margin: 0 auto;
   }
 }
 

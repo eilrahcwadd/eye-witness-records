@@ -1,6 +1,5 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import "./card.css";
 import Alison from "./alison.jpg";
 import Emil from "./Emil.jpg";
 import Aloha from "./aloha.jpg";

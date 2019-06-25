@@ -2,11 +2,11 @@ import React from "react";
 import "./App.css";
 import Toolbar from "./nav";
 import SideDrawer from "./SideDrawer";
-import Backdrop from "./backdrop";
+import { Animated } from "react-animated-css";
 
 function About() {
   return (
-    <div>
+    <div class="main_body">
       <div class="wrapper">
         <header class="header">
           <h1> About </h1>

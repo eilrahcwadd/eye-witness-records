@@ -2,18 +2,21 @@ import React from "react";
 import "./nav.css";
 import DrawerToggleButton from "./DrawerToggleButton.js";
 import { Link } from "react-router-dom";
-import UncontrolledLottie from "./UncontrolledLottie.js";
+import search from "./search.svg";
 const Toolbar = props => (
   <header className="toolbar">
     <nav className="toolbar_navigation">
+      <div className="logo">
+        <Link to="/">
+          <img src={search} alt="search" width="30px" />
+        </Link>{" "}
+      </div>
       <div className="toolbar__toggle-button">
         {" "}
         <DrawerToggleButton click={props.drawerClickHandler} />{" "}
       </div>
-      <div className="logo">
-        <UncontrolledLottie />
-      </div>
       <div className="spacer" />
+
       <div className="toolbar_navigation_items">
         <ul>
           <Link to="/">

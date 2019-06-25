@@ -4,12 +4,12 @@ import MusicCard from "./card";
 
 function Music() {
   return (
-    <div>
-      <div class="wrapper">
+    <div class="body">
+      <div class="wrapper-music">
         <header class="header">
           <h1> Music</h1>
         </header>
-        <div class="main">
+        <div class="main music">
           <MusicCard />
         </div>
       </div>

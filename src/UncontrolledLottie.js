@@ -2,6 +2,7 @@
 import React, { Component } from "react";
 import Lottie from "react-lottie";
 import animationData from "./Eye.json";
+import { Animated } from "react-animated-css";
 
 class UncontrolledLottie extends Component {
   render() {
@@ -16,7 +17,14 @@ class UncontrolledLottie extends Component {
 
     return (
       <div>
-        <Lottie options={defaultOptions} height={100} width={100} />
+        <Animated
+          animationIn="fadeInLeftBig"
+          animationInDuration={1400}
+          animationOut="fadeOutUp"
+          isVisible={true}
+        >
+          <Lottie options={defaultOptions} width={500} />
+        </Animated>
       </div>
     );
   }
